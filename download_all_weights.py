@@ -5,7 +5,7 @@ import argparse
 import sys
 from tqdm import tqdm
 
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+#sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 from weights_downloader import WeightsDownloader
 from weights_manifest import WeightsManifest
@@ -69,6 +69,18 @@ def main():
         print("Download cancelled")
         return
 
+    def download_single_weight(weight_info, weight_name, base_path=None):
+        """Helper function to download a single weight item"""
+        url = weight_info["url"]
+        dest = weight_info["dest"]
+        if base_path:
+            dest = os.path.join(base_path, dest)
+        print(f"Downloading {weight_name} to {dest}")
+        try:
+            downloader.download_if_not_exists(weight_name, url, dest)
+        except Exception as e:
+            print(f"Error downloading {weight_name}: {e}")
+
     # Download each weight
     for type_name in types_to_download:
         print(f"\nDownloading {type_name}:")
@@ -81,15 +93,12 @@ def main():
         for weight_name in tqdm(weight_list, desc=type_name):
             name = downloader.get_canonical_weight_str(weight_name)
             weight = weights_map[name]
-            url = weight["url"]
-            dest = weight["dest"]
-            if args.base_path:
-                dest = os.path.join(args.base_path, dest)
-            print(f"Downloading {weight_name} to {dest}")
-            try:
-                downloader.download_if_not_exists(weight_name, url, dest)
-            except Exception as e:
-                print(f"Error downloading {weight_name}: {e}")
+            
+            if type(weight) is list:
+                for w in weight:
+                    download_single_weight(w, weight_name, args.base_path)
+            else:
+                download_single_weight(weight, weight_name, args.base_path)
 
 if __name__ == "__main__":
     main()
