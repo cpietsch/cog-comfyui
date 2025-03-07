@@ -1,3 +1,33 @@
+## 2025-03-06
+
+New weights:
+
+- [Add ltx-video-2b-v0.9.5.safetensors to checkpoints](https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.safetensors)
+- [Add llava_llama3_vision.safetensors to clip_vision](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/blob/main/split_files/clip_vision/llava_llama3_vision.safetensors)
+- [Add hunyuan_video_image_to_video_720p_bf16.safetensors to diffusion_models](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/blob/main/split_files/diffusion_models/hunyuan_video_image_to_video_720p_bf16.safetensors)
+- [Add llava_llama3_fp16.safetensors to text_encoders](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/blob/main/split_files/text_encoders/llava_llama3_fp16.safetensors)
+- [Add llava_llama3_fp8_scaled.safetensors to text_encoders](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/blob/main/split_files/text_encoders/llava_llama3_fp8_scaled.safetensors)
+
+Updated ComfyUI:
+
+- [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/b07f116...0124be4)
+
+New custom nodes:
+
+- [Add ComfyUI-LTXVideo](https://github.com/Lightricks/ComfyUI-LTXVideo) custom node
+
+Updated custom nodes:
+
+- [Updated ComfyUI-DepthAnythingV2](https://github.com/kijai/ComfyUI-DepthAnythingV2/compare/003d7b4...9d7cb8c)
+- [Updated ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll/compare/952782a...f12f956)
+- [Updated ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper/compare/848168b...4863a2a)
+- [Updated ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes/compare/1a4259f...fa6d20e)
+- [Updated ComfyUI_UltimateSDUpscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale/compare/1b6e60d...edc4c95)
+- [Updated ComfyUI_tinyterraNodes](https://github.com/TinyTerra/ComfyUI_tinyterraNodes/compare/b0fd2c9...4de8756)
+- [Updated ComfyUI-Advanced-ControlNet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet/compare/b66cd70...da254b7)
+- [Updated ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved/compare/94eb456...916dd55)
+- [Updated ComfyUI-Inspire-Pack](https://github.com/ltdrdata/ComfyUI-Inspire-Pack/compare/ecf8ab6...ca5d942)
+
 ## 2025-03-01
 
 New custom nodes:
