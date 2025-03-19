@@ -5,7 +5,7 @@
   },
   {
     "repo": "https://github.com/Fannovel16/comfyui_controlnet_aux",
-    "commit": "1e9eac6"
+    "commit": "83463c2"
   },
   {
     "repo": "https://github.com/fofr/ComfyUI-Impact-Pack",
@@ -22,15 +22,15 @@
   },
   {
     "repo": "https://github.com/Acly/comfyui-tooling-nodes",
-    "commit": "ea75515"
+    "commit": "b8e4659"
   },
   {
     "repo": "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved",
-    "commit": "9f2d24d"
+    "commit": "3795f51"
   },
   {
     "repo": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
-    "commit": "031c4ae"
+    "commit": "0a75c79"
   },
   {
     "repo": "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet",
@@ -50,7 +50,7 @@
   },
   {
     "repo": "https://github.com/TinyTerra/ComfyUI_tinyterraNodes",
-    "commit": "3eab514"
+    "commit": "c669e6c"
   },
   {
     "repo": "https://github.com/ssitu/ComfyUI_UltimateSDUpscale",
@@ -66,7 +66,7 @@
   },
   {
     "repo": "https://github.com/pythongosssss/ComfyUI-Custom-Scripts",
-    "commit": "2c09d59"
+    "commit": "9f7b321"
   },
   {
     "repo": "https://github.com/BadCafeCode/masquerade-nodes-comfyui",
@@ -103,11 +103,11 @@
   },
   {
     "repo": "https://github.com/kijai/ComfyUI-KJNodes",
-    "commit": "2639615"
+    "commit": "a5bd3c8"
   },
   {
     "repo": "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation",
-    "commit": "c336f71"
+    "commit": "18b7cce"
   },
   {
     "repo": "https://github.com/fofr/ComfyUI-HyperSDXL1StepUnetScheduler",
@@ -135,7 +135,7 @@
   },
   {
     "repo": "https://github.com/rgthree/rgthree-comfy",
-    "commit": "32142fe"
+    "commit": "ab37a0b"
   },
   {
     "repo": "https://github.com/fofr/comfyui-prompter-fofrai",
@@ -208,7 +208,7 @@
   },
   {
     "repo": "https://github.com/kijai/ComfyUI-HunyuanVideoWrapper",
-    "commit": "c31f1be"
+    "commit": "1b4164f"
   },
   {
     "repo": "https://github.com/fofr/ComfyUI-AdvancedLivePortrait",
@@ -217,11 +217,11 @@
   },
   {
     "repo": "https://github.com/kijai/ComfyUI-Florence2",
-    "commit": "90b012e"
+    "commit": "c9bd1d3"
   },
   {
     "repo": "https://github.com/kijai/ComfyUI-segment-anything-2",
-    "commit": "059815e"
+    "commit": "c59676b"
   },
   {
     "repo": "https://github.com/glifxyz/ComfyUI-GlifNodes",
@@ -245,7 +245,7 @@
   },
   {
     "repo": "https://github.com/TTPlanetPig/Comfyui_TTP_Toolset",
-    "commit": "13bd85f"
+    "commit": "08fb8b9"
   },
   {
     "repo": "https://github.com/lldacing/ComfyUI_BiRefNet_ll",

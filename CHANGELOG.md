@@ -1,3 +1,23 @@
+## 2025-03-19
+
+- [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/b779349...3b19fc7)
+
+Updated custom nodes:
+
+- [Updated Comfyui_TTP_Toolset](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset/compare/13bd85f...08fb8b9)
+- [Updated ComfyUI-segment-anything-2](https://github.com/kijai/ComfyUI-segment-anything-2/compare/059815e...c59676b)
+- [Updated ComfyUI-Florence2](https://github.com/kijai/ComfyUI-Florence2/compare/90b012e...c9bd1d3)
+- [Updated ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper/compare/c31f1be...1b4164f)
+- [Updated rgthree-comfy](https://github.com/rgthree/rgthree-comfy/compare/32142fe...ab37a0b)
+- [Updated ComfyUI-Frame-Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation/compare/c336f71...18b7cce)
+- [Updated ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes/compare/2639615...a5bd3c8)
+- [Updated ComfyUI-Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts/compare/2c09d59...9f7b321)
+- [Updated ComfyUI_tinyterraNodes](https://github.com/TinyTerra/ComfyUI_tinyterraNodes/compare/3eab514...c669e6c)
+- [Updated ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/compare/031c4ae...0a75c79)
+- [Updated ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved/compare/9f2d24d...3795f51)
+- [Updated comfyui-tooling-nodes](https://github.com/Acly/comfyui-tooling-nodes/compare/ea75515...b8e4659)
+- [Updated comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux/compare/1e9eac6...83463c2)
+
 ## 2025-03-10
 
 Updated ComfyUI and custom nodes:
