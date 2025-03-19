@@ -73,9 +73,8 @@
     "commit": "432cb4d"
   },
   {
-    "repo": "https://github.com/fofr/ComfyUI-ReActor",
-    "commit": "4a7587a",
-    "notes": "Fork of https://github.com/Gourieff/ComfyUI-ReActor which lazy loads NSFW checker to speed up startup times (https://github.com/Gourieff/ComfyUI-ReActor/pull/30)"
+    "repo": "https://github.com/Gourieff/ComfyUI-ReActor",
+    "commit": "d901609"
   },
   {
     "repo": "https://github.com/cubiq/ComfyUI_InstantID",

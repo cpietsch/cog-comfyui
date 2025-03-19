@@ -8,6 +8,7 @@ New weights:
 Updated custom nodes:
 
 - [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/b779349...3b19fc7)
+- [Updated ComfyUI-ReActor and switch back to original repo](https://github.com/Gourieff/ComfyUI-ReActor/compare/4a7587a...d901609)
 - [Updated Comfyui_TTP_Toolset](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset/compare/13bd85f...08fb8b9)
 - [Updated ComfyUI-segment-anything-2](https://github.com/kijai/ComfyUI-segment-anything-2/compare/059815e...c59676b)
 - [Updated ComfyUI-Florence2](https://github.com/kijai/ComfyUI-Florence2/compare/90b012e...c9bd1d3)
