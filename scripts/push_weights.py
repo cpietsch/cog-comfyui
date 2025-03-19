@@ -304,9 +304,9 @@ def update_changelog(subfolder, filename, url):
             url = url.replace("/resolve/", "/blob/")
             if "?download=true" in url:
                 url = url.replace("?download=true", "")
-        update_line = f"- [Add {filename} to {subfolder.lower()}]({url})\n"
+        update_line = f"- [{filename} ({subfolder.lower()})]({url})\n"
     else:
-        update_line = f"- Add {filename} to {subfolder.lower()}\n"
+        update_line = f"- {filename} ({subfolder.lower()})\n"
 
     try:
         with open(changelog_file, "r+") as file:
