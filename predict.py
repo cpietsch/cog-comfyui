@@ -17,6 +17,8 @@ os.environ["DOWNLOAD_LATEST_WEIGHTS_MANIFEST"] = "true"
 os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
 
 mimetypes.add_type("image/webp", ".webp")
+mimetypes.add_type("video/webm", ".webm")
+
 OUTPUT_DIR = "/tmp/outputs"
 INPUT_DIR = "/tmp/inputs"
 COMFYUI_TEMP_OUTPUT_DIR = "ComfyUI/temp"
