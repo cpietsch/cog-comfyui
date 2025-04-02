@@ -204,7 +204,8 @@
     "model.15.safetensors",
     "model.sdxl.safetensors",
     "SD1.5/model.safetensors",
-    "sigclip_vision_patch14_384.safetensors"
+    "sigclip_vision_patch14_384.safetensors",
+    "siglip2_so400m_patch16_512.safetensors"
   ],
   "LORAS": [
     "3d_render_style_xl.safetensors",

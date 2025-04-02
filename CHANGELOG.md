@@ -1,5 +1,15 @@
 ## 2025-04-02
 
+New weights:
+
+- [siglip2_so400m_patch16_512.safetensors (clip_vision)](https://huggingface.co/ostris/ComfyUI-Advanced-Vision/blob/main/clip_vision/siglip2_so400m_patch16_512.safetensors)
+
+New custom nodes:
+
+- [Add ComfyUI-Advanced-Vision](https://github.com/ostris/ComfyUI-Advanced-Vision) custom node
+
+Updated custom nodes:
+
 - [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/3b19fc7...ab54133)
 - [Updated ComfyUI_BiRefNet_ll](https://github.com/lldacing/ComfyUI_BiRefNet_ll/compare/8bda575...617827c)
 - [Updated ComfyUI-InstantX-IPAdapter-SD3](https://github.com/Slickytail/ComfyUI-InstantX-IPAdapter-SD3/compare/adf203e...35eafa9)

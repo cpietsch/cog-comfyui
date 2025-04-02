@@ -261,5 +261,9 @@
   {
     "repo": "https://github.com/Lightricks/ComfyUI-LTXVideo",
     "commit": "e2a7351"
+  },
+  {
+    "repo": "https://github.com/ostris/ComfyUI-Advanced-Vision",
+    "commit": "a0d6e80"
   }
 ]

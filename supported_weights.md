@@ -206,6 +206,7 @@
 - model.sdxl.safetensors
 - SD1.5/model.safetensors
 - sigclip_vision_patch14_384.safetensors
+- siglip2_so400m_patch16_512.safetensors
 
 ## LORAs
 
