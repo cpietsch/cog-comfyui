@@ -1,3 +1,24 @@
+## 2025-04-02
+
+- [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/3b19fc7...ab54133)
+- [Updated ComfyUI_BiRefNet_ll](https://github.com/lldacing/ComfyUI_BiRefNet_ll/compare/8bda575...617827c)
+- [Updated ComfyUI-InstantX-IPAdapter-SD3](https://github.com/Slickytail/ComfyUI-InstantX-IPAdapter-SD3/compare/adf203e...35eafa9)
+- [Updated Comfy-WaveSpeed](https://github.com/chengzeyi/Comfy-WaveSpeed/compare/3db162b...16ec6f3)
+- [Updated ComfyUI-Florence2](https://github.com/kijai/ComfyUI-Florence2/compare/c9bd1d3...257fec5)
+- [Updated ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper/compare/1b4164f...83f0bbb)
+- [Updated ComfyUI-BrushNet](https://github.com/nullquant/ComfyUI-BrushNet/compare/e237b6e...505d8ef)
+- [Updated comfyui-inpaint-nodes](https://github.com/Acly/comfyui-inpaint-nodes/compare/b9039c2...726e16f)
+- [Updated ComfyUI-Kolors-MZ](https://github.com/MinusZoneAI/ComfyUI-Kolors-MZ/compare/4653a73...43ec270)
+- [Updated style_aligned_comfy](https://github.com/brianfitzgerald/style_aligned_comfy/compare/39741e3...b4095d6)
+- [Updated rgthree-comfy](https://github.com/rgthree/rgthree-comfy/compare/ab37a0b...f044a9d)
+- [Updated ComfyUI-Frame-Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation/compare/18b7cce...3d6b803)
+- [Updated ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes/compare/a5bd3c8...2aa4da0)
+- [Updated was-node-suite-comfyui](https://github.com/WASasquatch/was-node-suite-comfyui/compare/9ae952b...1014f8a)
+- [Updated efficiency-nodes-comfyui](https://github.com/jags111/efficiency-nodes-comfyui/compare/3ead4af...9e3c5aa)
+- [Updated ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/compare/0a75c79...972c87d)
+- [Updated comfyui-tooling-nodes](https://github.com/Acly/comfyui-tooling-nodes/compare/b8e4659...c2308a0)
+- [Updated ComfyUI-Inspire-Pack](https://github.com/ltdrdata/ComfyUI-Inspire-Pack/compare/ca5d942...9d179f0)
+
 ## 2025-03-19
 
 New weights:
