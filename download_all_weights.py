@@ -5,6 +5,7 @@ import argparse
 import sys
 from tqdm import tqdm
 
+# XDG_RUNTIME_DIR=/home/jovyan/pget.pid ./download_all_weights.py --base-path /home/jovyan/_shared/models/
 #sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 from weights_downloader import WeightsDownloader
