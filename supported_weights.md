@@ -42,6 +42,8 @@
 - Flex.1-alpha.safetensors
 - flux1-dev-fp8.safetensors
 - flux1-schnell-fp8.safetensors
+- hunyuan3d-dit-v2-mv-turbo.safetensors
+- hunyuan3d-dit-v2-mv.safetensors
 - Hyper-SDXL-1step-Unet-Comfyui.fp16.safetensors
 - Hyper-SDXL-1step-Unet.safetensors
 - illustriousXL_v01.safetensors
@@ -170,7 +172,10 @@
 
 ## Text Encoders
 
+- clip_g_hidream.safetensors
+- clip_l_hidream.safetensors
 - gemma_2_2b_fp16.safetensors
+- llama_3.1_8b_instruct_fp8_scaled.safetensors
 - llava_llama3_fp16.safetensors
 - llava_llama3_fp8_scaled.safetensors
 - oldt5_xxl_fp8_e4m3fn_scaled.safetensors
@@ -569,6 +574,12 @@
 - flux1-dev-fp8-e5m2.safetensors
 - flux1-fill-dev.safetensors
 - flux1-schnell-fp8-e4m3fn.safetensors
+- hidream_i1_dev_bf16.safetensors
+- hidream_i1_dev_fp8.safetensors
+- hidream_i1_fast_bf16.safetensors
+- hidream_i1_fast_fp8.safetensors
+- hidream_i1_full_fp16.safetensors
+- hidream_i1_full_fp8.safetensors
 - hunyuan_video_720_fp8_e4m3fn.safetensors
 - hunyuan_video_image_to_video_720p_bf16.safetensors (Also available as hunyuan_video_v2_replace_image_to_video_720p_bf16.safetensors)
 - mochi/mochi_preview_dit_fp8_e4m3fn.safetensors

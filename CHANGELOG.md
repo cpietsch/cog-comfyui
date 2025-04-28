@@ -1,6 +1,42 @@
 ## 2025-04-28
 
+New weights:
+
+- [hunyuan3d-dit-v2-mv.safetensors (checkpoints)](https://huggingface.co/tencent/Hunyuan3D-2mv/blob/main/hunyuan3d-dit-v2-mv/model.fp16.safetensors)
+- [hunyuan3d-dit-v2-mv-turbo.safetensors (checkpoints)](https://huggingface.co/tencent/Hunyuan3D-2mv/blob/main/hunyuan3d-dit-v2-mv-turbo/model.fp16.safetensors)
+- [hidream_i1_full_fp8.safetensors (diffusion_models)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_full_fp8.safetensors)
+- [hidream_i1_full_fp16.safetensors (diffusion_models)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_full_fp16.safetensors)
+- [hidream_i1_fast_fp8.safetensors (diffusion_models)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_fast_fp8.safetensors)
+- [hidream_i1_fast_bf16.safetensors (diffusion_models)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_fast_bf16.safetensors)
+- [hidream_i1_dev_fp8.safetensors (diffusion_models)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_dev_fp8.safetensors)
+- [hidream_i1_dev_bf16.safetensors (diffusion_models)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_dev_bf16.safetensors)
+- [llama_3.1_8b_instruct_fp8_scaled.safetensors (text_encoders)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors)
+- [clip_g_hidream.safetensors (text_encoders)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/text_encoders/clip_g_hidream.safetensors)
+- [clip_l_hidream.safetensors (text_encoders)](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/text_encoders/clip_l_hidream.safetensors)
+
+Update ComfyUI and custom nodes:
+
+- [Updated ComfyUI-LTXVideo](https://github.com/Lightricks/ComfyUI-LTXVideo/compare/e2a7351...ddb9667)
+- [Updated Comfyui-In-Context-Lora-Utils](https://github.com/lrzjason/Comfyui-In-Context-Lora-Utils/compare/6ef772d...ede1f33)
+- [Updated ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll/compare/314a84d...4a9ea6e)
+- [Updated ComfyUI-Florence2](https://github.com/kijai/ComfyUI-Florence2/compare/257fec5...18f62ac)
+- [Updated ComfyUI_PuLID_Flux_ll](https://github.com/lldacing/ComfyUI_PuLID_Flux_ll/compare/5f1e91d...ba90657)
+- [Updated ComfyUI-SUPIR](https://github.com/kijai/ComfyUI-SUPIR/compare/53fc4f8...29f2e8b)
+- [Updated rgthree-comfy](https://github.com/rgthree/rgthree-comfy/compare/f044a9d...5dc5332)
+- [Updated PuLID_ComfyUI](https://github.com/cubiq/PuLID_ComfyUI/compare/4e1fd40...93e0c4c)
+- [Updated ComfyUI-Frame-Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation/compare/3d6b803...7578205)
+- [Updated ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes/compare/2aa4da0...c3dc821)
+- [Updated was-node-suite-comfyui](https://github.com/WASasquatch/was-node-suite-comfyui/compare/1014f8a...831199b)
+- [Updated ComfyUI_InstantID](https://github.com/cubiq/ComfyUI_InstantID/compare/1ef34ef...72495e8)
+- [Updated ComfyUI-Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts/compare/9f7b321...ba22ba1)
+- [Updated ComfyUI_essentials](https://github.com/cubiq/ComfyUI_essentials/compare/33ff89f...9d9f4be)
+- [Updated ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/compare/972c87d...a7ce59e)
+- [Updated ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved/compare/3795f51...a34036b)
+- [Updated comfyui-tooling-nodes](https://github.com/Acly/comfyui-tooling-nodes/compare/c2308a0...5f4373d)
+- [Updated ComfyUI-Inspire-Pack](https://github.com/ltdrdata/ComfyUI-Inspire-Pack/compare/9d179f0...0f38db4)
+- [Updated ComfyUI_IPAdapter_plus](https://github.com/cubiq/ComfyUI_IPAdapter_plus/compare/9d076a3...a0f451a)
 - [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/ab54133...8115a78)
+
 ## 2025-04-02
 
 New weights:
