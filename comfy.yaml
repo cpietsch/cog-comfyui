@@ -1,0 +1,426 @@
+name: comfy
+version: 5-2025
+description: "running and installing comfy with zoomaker"
+author: Christopher Pietsch
+
+# pip install --upgrade --force-reinstall zoomaker
+# zoomaker -f comfy.yaml install
+# zoomaker -f comfy.yaml run setup
+# zoomaker -f comfy.yaml run start
+# cloudflared tunnel --url localhost:8188/.
+
+aliases:
+  image_generator: &image_generator ./
+  custom_nodes: &custom_nodes ./ComfyUI/custom_nodes/
+
+scripts:
+  update: pip install --upgrade --force-reinstall zoomaker
+  setup: |
+    cd ComfyUI
+    cat > extra_model_paths.yaml<< EOF
+    comfyui:
+        base_path: /home/jovyan/_shared/models/ComfyUI
+        BiRefNet: models/BiRefNet/ 
+        FBCNN: models/FBCNN/
+        LLM: models/LLM/
+        animatediff_models: models/animatediff_models/
+        animatediff_motion_lora: models/animatediff_motion_lora/
+        bert-base-uncased: models/bert-base-uncased/
+        checkpoints: models/checkpoints/
+        clip: models/clip/
+        clip_vision: models/clip_vision/
+        clipseg: models/clipseg/
+        controlnet: models/controlnet/
+        depthanything: models/depthanything/
+        diffusion_models: models/diffusion_models/
+        diffusers: models/diffusers/
+        dynamicrafter: models/dynamicrafter/
+        embeddings: models/embeddings/
+        facedetection: models/facedetection/
+        facerestore_models: models/facerestore_models/
+        gligen: models/gligen/
+        grounding-dino: models/grounding-dino/
+        inpaint: models/inpaint/
+        insightface: models/insightface/
+        instantid: models/instantid/
+        ipadapter: models/ipadapter/
+        layer_model: models/layer_model/
+        liveportrait: models/liveportrait/
+        loras: models/loras/
+        mmdets: models/mmdets/
+        nsfw_detector: models/nsfw_detector/
+        photomaker: models/photomaker/
+        pulid: models/pulid/
+        rembg: models/rembg/
+        reswapper: models/reswapper/
+        sam2: models/sam2/
+        sams: models/sams/
+        style_models: models/style_models/
+        tensorrt: models/tensorrt/
+        text_encoders: models/text_encoders/
+        ultralytics: models/ultralytics/
+        ultrapixel: models/ultrapixel/
+        upscale_models: models/upscale_models/
+        vae: models/vae/
+    EOF
+    python -m venv .venv --prompt ComfyUI
+    . .venv/bin/activate
+    pip install -r requirements.txt
+    pip install insightface numexpr webcolors numexpr simpleeval onnxruntime piexif pandas ultralytics segment_anything imageio_ffmpeg dill yapf open-clip-torch addict ftfy pytorch_lightning xformers diffusers facexlib omegaconf numba accelerate timm pypng
+
+  activate: |
+    cd ComfyUI
+    . .venv/bin/activate
+
+  start: |
+    cd ComfyUI
+    . .venv/bin/activate
+    echo "👉  ComfyUI starting on: https://jupyter.kitegg.de/user/${JUPYTERHUB_USER}/proxy/8188/"
+    COMFYUI_MODEL_PATH=/home/jovyan/_shared/models/ComfyUI python main.py --listen
+
+resources:
+  comfy:
+    - name: ComfyUI
+      src: https://github.com/comfyanonymous/ComfyUI
+      type: git
+      install_to: *image_generator
+
+  custom_nodes:
+    - name: ComfyUI-Impact-Subpack
+      src: https://github.com/ltdrdata/ComfyUI-Impact-Subpack
+      type: git
+      install_to: *custom_nodes
+    - install_to: *custom_nodes
+      name: ComfyUI_IPAdapter_plus
+      src: https://github.com/cubiq/ComfyUI_IPAdapter_plus
+      revision: a0f451a
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui_controlnet_aux
+      src: https://github.com/Fannovel16/comfyui_controlnet_aux
+      revision: 83463c2
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Impact-Pack
+      src: https://github.com/fofr/ComfyUI-Impact-Pack # Updated src to fork
+      revision: ab17f88
+      notes: Fork of https://github.com/ltdrdata/ComfyUI-Impact-Pack which prevents automatic installation of dependencies
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Inspire-Pack
+      src: https://github.com/ltdrdata/ComfyUI-Inspire-Pack
+      revision: 0f38db4
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Logic
+      src: https://github.com/theUpsider/ComfyUI-Logic
+      revision: 42d4f3d
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui-tooling-nodes
+      src: https://github.com/Acly/comfyui-tooling-nodes
+      revision: 5f4373d
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-AnimateDiff-Evolved
+      src: https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved
+      revision: a34036b
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-VideoHelperSuite
+      src: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite
+      revision: a7ce59e
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Advanced-ControlNet
+      src: https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
+      revision: da254b7
+      type: git
+    - install_to: *custom_nodes
+      name: efficiency-nodes-comfyui
+      src: https://github.com/jags111/efficiency-nodes-comfyui
+      revision: 9e3c5aa
+      type: git
+    - install_to: *custom_nodes
+      name: Derfuu_ComfyUI_ModdedNodes
+      src: https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes
+      revision: d0905be
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_FizzNodes
+      src: https://github.com/FizzleDorf/ComfyUI_FizzNodes
+      revision: 7d6ea60
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_tinyterraNodes
+      src: https://github.com/TinyTerra/ComfyUI_tinyterraNodes
+      revision: c669e6c
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_UltimateSDUpscale
+      src: https://github.com/ssitu/ComfyUI_UltimateSDUpscale
+      revision: 778a475
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_essentials
+      src: https://github.com/cubiq/ComfyUI_essentials
+      revision: 9d9f4be
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-PhotoMaker-Plus
+      src: https://github.com/shiimizu/ComfyUI-PhotoMaker-Plus
+      revision: 459f5c0
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Custom-Scripts
+      src: https://github.com/pythongosssss/ComfyUI-Custom-Scripts
+      revision: ba22ba1
+      type: git
+    - install_to: *custom_nodes
+      name: masquerade-nodes-comfyui
+      src: https://github.com/BadCafeCode/masquerade-nodes-comfyui
+      revision: 432cb4d
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-ReActor
+      src: https://github.com/fofr/ComfyUI-ReActor # Kept fork src
+      revision: d901609 # Updated revision
+      notes: Fork of https://github.com/Gourieff/ComfyUI-ReActor which lazy loads NSFW checker to speed up startup times (https://github.com/Gourieff/ComfyUI-ReActor/pull/30)
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_InstantID
+      src: https://github.com/cubiq/ComfyUI_InstantID
+      revision: 72495e8
+      type: git
+    - install_to: *custom_nodes
+      name: was-node-suite-comfyui
+      src: https://github.com/WASasquatch/was-node-suite-comfyui
+      revision: 831199b
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui_segment_anything
+      src: https://github.com/fofr/comfyui_segment_anything
+      revision: 2916eb3
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-BRIA_AI-RMBG
+      src: https://github.com/ZHO-ZHO-ZHO/ComfyUI-BRIA_AI-RMBG
+      revision: 827fcd6
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_Comfyroll_CustomNodes
+      src: https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes
+      revision: d78b780
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-layerdiffuse
+      src: https://github.com/huchenlei/ComfyUI-layerdiffuse
+      revision: b4f6a9e
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-KJNodes
+      src: https://github.com/kijai/ComfyUI-KJNodes
+      revision: c3dc821
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Frame-Interpolation
+      src: https://github.com/Fannovel16/ComfyUI-Frame-Interpolation
+      revision: 7578205
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-HyperSDXL1StepUnetScheduler
+      src: https://github.com/fofr/ComfyUI-HyperSDXL1StepUnetScheduler
+      revision: 3247161
+      type: git
+    - install_to: *custom_nodes
+      name: PuLID_ComfyUI
+      src: https://github.com/cubiq/PuLID_ComfyUI
+      revision: 93e0c4c
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-IC-Light-Native
+      src: https://github.com/huchenlei/ComfyUI-IC-Light-Native
+      revision: 40883a8
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-IC-Light
+      src: https://github.com/kijai/ComfyUI-IC-Light
+      revision: 0208191
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui_jankhidiffusion
+      src: https://github.com/blepping/comfyui_jankhidiffusion
+      revision: 54d60e0
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Anyline
+      src: https://github.com/TheMistoAI/ComfyUI-Anyline
+      revision: 1ec3d61
+      type: git
+    - install_to: *custom_nodes
+      name: rgthree-comfy
+      src: https://github.com/rgthree/rgthree-comfy
+      revision: 5dc5332
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui-prompter-fofrai
+      src: https://github.com/fofr/comfyui-prompter-fofrai
+      revision: 15472a9
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-SUPIR
+      src: https://github.com/kijai/ComfyUI-SUPIR
+      revision: 29f2e8b
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyMath
+      src: https://github.com/evanspearman/ComfyMath
+      revision: c011772
+      type: git
+    - install_to: *custom_nodes
+      name: style_aligned_comfy
+      src: https://github.com/brianfitzgerald/style_aligned_comfy
+      revision: b4095d6
+      type: git
+    - install_to: *custom_nodes
+      name: attention-couple-ComfyUI
+      src: https://github.com/laksjdjf/attention-couple-ComfyUI
+      revision: 8730461
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Kolors-MZ
+      src: https://github.com/MinusZoneAI/ComfyUI-Kolors-MZ
+      revision: 43ec270
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-B-LoRA
+      src: https://github.com/liusida/ComfyUI-B-LoRA
+      revision: 744b2e1
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui-inpaint-nodes
+      src: https://github.com/Acly/comfyui-inpaint-nodes
+      revision: 726e16f
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-BrushNet
+      src: https://github.com/nullquant/ComfyUI-BrushNet
+      revision: 505d8ef
+      type: git
+    - install_to: *custom_nodes
+      name: comfyui-fofr-toolkit
+      src: https://github.com/fofr/comfyui-fofr-toolkit
+      revision: eb5fec4
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-BiRefNet-ZHO
+      src: https://github.com/shadel/ComfyUI-BiRefNet-ZHO
+      revision: 0f4879d
+      notes: Fork of https://github.com/ZHO-ZHO-ZHO/ComfyUI-BiRefNet which fixes util imports
+      type: git
+    - install_to: *custom_nodes
+      name: x-flux-comfyui
+      src: https://github.com/XLabs-AI/x-flux-comfyui
+      revision: 0032855
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Video-Matting
+      src: https://github.com/Fannovel16/ComfyUI-Video-Matting
+      revision: dd5ff37
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_ColorMod
+      src: https://github.com/city96/ComfyUI_ColorMod
+      revision: 2f14785
+      type: git
+    - install_to: *custom_nodes
+      name: MistoControlNet-Flux-dev
+      src: https://github.com/TheMistoAI/MistoControlNet-Flux-dev
+      revision: 79e3982
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Fluxtapoz
+      src: https://github.com/logtd/ComfyUI-Fluxtapoz
+      revision: 17c71be
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_PuLID_Flux_ll
+      src: https://github.com/lldacing/ComfyUI_PuLID_Flux_ll
+      revision: ba90657
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-HunyuanVideoWrapper
+      src: https://github.com/kijai/ComfyUI-HunyuanVideoWrapper
+      revision: 83f0bbb
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-AdvancedLivePortrait
+      src: https://github.com/fofr/ComfyUI-AdvancedLivePortrait
+      revision: f097659
+      notes: Fork of https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait which removes `rich` dependency
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Florence2
+      src: https://github.com/kijai/ComfyUI-Florence2
+      revision: 18f62ac
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-segment-anything-2
+      src: https://github.com/kijai/ComfyUI-segment-anything-2
+      revision: c59676b
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-GlifNodes
+      src: https://github.com/glifxyz/ComfyUI-GlifNodes
+      revision: b86352c
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_Patches_ll
+      src: https://github.com/lldacing/ComfyUI_Patches_ll
+      revision: 4a9ea6e
+      type: git
+    - install_to: *custom_nodes
+      name: Comfy-WaveSpeed
+      src: https://github.com/chengzeyi/Comfy-WaveSpeed
+      revision: 16ec6f3
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-InstantX-IPAdapter-SD3
+      src: https://github.com/Slickytail/ComfyUI-InstantX-IPAdapter-SD3
+      revision: 35eafa9
+      type: git
+    - install_to: *custom_nodes
+      name: Comfyui-In-Context-Lora-Utils
+      src: https://github.com/lrzjason/Comfyui-In-Context-Lora-Utils
+      revision: ede1f33
+      type: git
+    - install_to: *custom_nodes
+      name: Comfyui_TTP_Toolset
+      src: https://github.com/TTPlanetPig/Comfyui_TTP_Toolset
+      revision: 08fb8b9
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI_BiRefNet_ll
+      src: https://github.com/lldacing/ComfyUI_BiRefNet_ll
+      revision: 617827c
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-DepthAnythingV2
+      src: https://github.com/kijai/ComfyUI-DepthAnythingV2
+      revision: 9d7cb8c
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-FBCNN
+      src: https://github.com/Miosp/ComfyUI-FBCNN
+      revision: c737c93
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-LTXVideo
+      src: https://github.com/Lightricks/ComfyUI-LTXVideo
+      revision: ddb9667
+      type: git
+    - install_to: *custom_nodes
+      name: ComfyUI-Advanced-Vision
+      src: https://github.com/ostris/ComfyUI-Advanced-Vision
+      revision: a0d6e80
+      type: git
