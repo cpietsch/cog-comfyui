@@ -1,3 +1,6 @@
+## 2025-04-28
+
+- [Update ComfyUI to latest](https://github.com/comfyanonymous/ComfyUI/compare/ab54133...8115a78)
 ## 2025-04-02
 
 New weights:
