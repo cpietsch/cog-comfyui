@@ -84,6 +84,7 @@ resources:
       src: https://github.com/comfyanonymous/ComfyUI
       type: git
       install_to: *image_generator
+      revision: 8115a78
 
   custom_nodes:
     - name: ComfyUI-Impact-Subpack
@@ -419,6 +420,7 @@ resources:
       src: https://github.com/Lightricks/ComfyUI-LTXVideo
       revision: ddb9667
       type: git
+    # Added from JSON
     - install_to: *custom_nodes
       name: ComfyUI-Advanced-Vision
       src: https://github.com/ostris/ComfyUI-Advanced-Vision
